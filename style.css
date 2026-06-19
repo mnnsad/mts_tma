@@ -1,6 +1,6 @@
 /* ============================
    ГЛОБАЛЬНЫЕ СТИЛИ
-   Цвета: Красный (#e60000) + Белый + Серый
+   Цвета: Мягкий красный (#cc3333) + Белый + Серый
    Шрифт: Inter
    ============================ */
 
@@ -12,17 +12,17 @@
 
 body {
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-    background: #f5f5f7;
+    background: #f0f2f5;
     height: 100vh;
     overflow: hidden;
     color: #1a1a1a;
 }
 
 /* ============================
-   ШАПКА (МТС КРАСНЫЙ)
+   ШАПКА (МЯГКИЙ КРАСНЫЙ)
    ============================ */
 .header {
-    background: #e60000;
+    background: #cc3333;
     color: #ffffff;
     padding: 14px 20px;
     display: flex;
@@ -34,7 +34,7 @@ body {
     right: 0;
     z-index: 1000;
     height: 60px;
-    box-shadow: 0 2px 16px rgba(230, 0, 0, 0.30);
+    box-shadow: 0 2px 16px rgba(204, 51, 51, 0.25);
 }
 
 .header .logo {
@@ -59,13 +59,12 @@ body {
 }
 
 .header .badge {
-    background: rgba(255, 255, 255, 0.18);
+    background: rgba(255, 255, 255, 0.15);
     padding: 5px 16px;
     border-radius: 24px;
     font-size: 13px;
     font-weight: 500;
-    border: 1px solid rgba(255, 255, 255, 0.12);
-    backdrop-filter: blur(4px);
+    border: 1px solid rgba(255, 255, 255, 0.10);
 }
 
 /* ============================
@@ -122,8 +121,8 @@ body {
     margin-top: 1px;
 }
 
-.stat-item.red .number   { color: #e60000; }
-.stat-item.orange .number { color: #ff8c00; }
+.stat-item.red .number   { color: #cc3333; }
+.stat-item.orange .number { color: #e68a2e; }
 .stat-item.green .number { color: #00a859; }
 .stat-item.gray .number  { color: #888; }
 
@@ -144,10 +143,10 @@ body {
     display: flex;
     background: #ffffff;
     border-radius: 30px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.10);
     overflow: hidden;
     z-index: 1000;
-    border: 1px solid rgba(230, 0, 0, 0.08);
+    border: 1px solid rgba(204, 51, 51, 0.08);
 }
 
 .view-toggle button {
@@ -171,9 +170,9 @@ body {
 }
 
 .view-toggle button.active {
-    background: #e60000;
+    background: #cc3333;
     color: #ffffff;
-    box-shadow: 0 2px 12px rgba(230, 0, 0, 0.30);
+    box-shadow: 0 2px 12px rgba(204, 51, 51, 0.25);
 }
 
 /* ============================
@@ -186,7 +185,7 @@ body {
     left: 0;
     right: 0;
     bottom: 70px;
-    background: #f5f5f7;
+    background: #f0f2f5;
     overflow-y: auto;
     z-index: 50;
     padding: 16px 16px 80px;
@@ -202,7 +201,7 @@ body {
     align-items: center;
     margin-bottom: 16px;
     padding-bottom: 12px;
-    border-bottom: 2px solid #e60000;
+    border-bottom: 2px solid #cc3333;
 }
 
 .list-header h2 {
@@ -214,8 +213,8 @@ body {
 .list-header .count {
     font-size: 14px;
     font-weight: 600;
-    color: #e60000;
-    background: rgba(230, 0, 0, 0.08);
+    color: #cc3333;
+    background: rgba(204, 51, 51, 0.08);
     padding: 4px 16px;
     border-radius: 20px;
 }
@@ -227,7 +226,7 @@ body {
     padding: 14px 16px;
     margin-bottom: 10px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-    border-left: 4px solid #e60000;
+    border-left: 4px solid #cc3333;
     transition: transform 0.15s ease;
 }
 
@@ -262,8 +261,8 @@ body {
     margin-left: 8px;
 }
 
-.status-badge.new         { background: #fff3e0; color: #ff8c00; }
-.status-badge.in_progress { background: #ffebee; color: #e60000; }
+.status-badge.new         { background: #fdf0e0; color: #e68a2e; }
+.status-badge.in_progress { background: #f0e0e0; color: #cc3333; }
 .status-badge.resolved    { background: #e8f5e9; color: #00a859; }
 .status-badge.rejected    { background: #f5f5f5; color: #999; }
 
@@ -280,7 +279,7 @@ body {
 .complaint-item .category-tag {
     font-size: 12px;
     font-weight: 600;
-    background: #e60000;
+    background: #cc3333;
     color: #ffffff;
     padding: 2px 14px;
     border-radius: 14px;
@@ -332,7 +331,7 @@ body {
     position: fixed;
     bottom: 140px;
     right: 16px;
-    background: #e60000;
+    background: #cc3333;
     color: #ffffff;
     border: none;
     border-radius: 50%;
@@ -340,7 +339,7 @@ body {
     height: 50px;
     font-size: 24px;
     cursor: pointer;
-    box-shadow: 0 4px 16px rgba(230, 0, 0, 0.35);
+    box-shadow: 0 4px 16px rgba(204, 51, 51, 0.30);
     z-index: 1000;
     transition: transform 0.2s, box-shadow 0.2s;
     display: flex;
@@ -350,7 +349,7 @@ body {
 
 .refresh-btn:active {
     transform: scale(0.90);
-    box-shadow: 0 2px 8px rgba(230, 0, 0, 0.25);
+    box-shadow: 0 2px 8px rgba(204, 51, 51, 0.20);
 }
 
 /* ============================
