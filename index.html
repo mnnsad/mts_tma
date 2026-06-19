@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>ТМА МТС</title>
+    
+    <!-- Шрифт Inter (не замудренный, но современный) -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    
+    <!-- Leaflet для карт -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    
+    <!-- Telegram Web App -->
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+    
+    <!-- Подключаем стили -->
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+    <!-- ===== ШАПКА ===== -->
+    <header class="header">
+        <div class="logo">
+            <span class="logo-icon">📡</span>
+            <h1>ТМА <span>МТС</span></h1>
+        </div>
+        <span class="badge" id="complaintCount">0 жалоб</span>
+    </header>
+
+    <!-- ===== КОНТЕЙНЕР ДЛЯ КАРТЫ ===== -->
+    <div id="map"></div>
+
+    <!-- ===== ПАНЕЛЬ СТАТИСТИКИ (ВНИЗУ) ===== -->
+    <div class="stats-bar">
+        <div class="stat-item red">
+            <div class="number" id="activeCount">0</div>
+            <div class="label">Активных</div>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item orange">
+            <div class="number" id="newCount">0</div>
+            <div class="label">Новых</div>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item green">
+            <div class="number" id="resolvedCount">0</div>
+            <div class="label">Решено</div>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item gray">
+            <div class="number" id="totalCount">0</div>
+            <div class="label">Всего</div>
+        </div>
+    </div>
+
+    <!-- ===== ПЕРЕКЛЮЧАТЕЛЬ ВИДОВ (КАРТА / СПИСОК) ===== -->
+    <div class="view-toggle">
+        <button id="btnMap" class="active" onclick="showMap()">🗺️ Карта</button>
+        <button id="btnList" onclick="showList()">📋 Список</button>
+    </div>
+
+    <!-- ===== СПИСОК ЖАЛОБ ===== -->
+    <div id="complaintList">
+        <div class="list-header">
+            <h2>📋 Жалобы клиентов</h2>
+            <span class="count" id="listCount">0</span>
+        </div>
+        <div id="complaintItems">
+            <!-- Сюда будут подгружаться жалобы -->
+        </div>
+    </div>
+
+    <!-- ===== КНОПКА ОБНОВЛЕНИЯ ===== -->
+    <button class="refresh-btn" onclick="loadData()" title="Обновить">⟳</button>
+
+    <!-- Подключаем скрипт -->
+    <script src="script.js"></script>
+</body>
+</html>
